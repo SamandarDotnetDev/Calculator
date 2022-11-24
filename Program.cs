@@ -1,18 +1,13 @@
 ﻿using System;
 using CALCULATOR.Classes;
 
-    Security obj1 = new Security();
-    obj1.security();
-
-
-
-    System.Console.Write("Type to 1st number :");
-    int firstNumber = Convert.ToInt32(Console.ReadLine());
-    System.Console.WriteLine("Enter operator|+ , - , * , /|");
-    string operation = Console.ReadLine();
-    System.Console.Write("Type to 2nd number :");
-    int secondNumber = Convert.ToInt32(Console.ReadLine());
-
+    Security passwordChecking = new Security();
+    Calculator operators =new Calculator();
+    Tables mutiple =new Tables();
+    passwordChecking.security();
+    operators.Operator();
+    mutiple.Table();
+    
     
     // System.Console.WriteLine($"Adding {firstNumber + secondNumber}");
     // System.Console.WriteLine($"Substracting {firstNumber - secondNumber}");
@@ -55,17 +50,9 @@ using CALCULATOR.Classes;
     // }
 
     // Switch Expressions
-    string result = operation switch
-    {
-      "+" => $"{firstNumber} + {secondNumber} = {firstNumber + secondNumber}",
-      "-" => $"{firstNumber} - {secondNumber} = {firstNumber - secondNumber}",
-      "*" => $"{firstNumber} * {secondNumber} = {firstNumber * secondNumber}",
-      "/" => $"{firstNumber} / {secondNumber} = {firstNumber / secondNumber}",
-      "%" => $"{firstNumber} % {secondNumber} = {firstNumber % secondNumber}",
-      _ => "Operation Not Found!"
-    };
+    
 
-    System.Console.WriteLine(result);
+    
 
     //While Loop
     // while (firstNumber >= secondNumber)
@@ -85,12 +72,3 @@ using CALCULATOR.Classes;
     //     System.Console.WriteLine(i);
     //   }
     // }
-
-    for (int i = 0; i < 11; i++)
-    {
-      for (int n = 0; n < 11; n++)
-      {
-        System.Console.WriteLine($"{i} x {n} = {i * n}");
-      }
-    }
-
